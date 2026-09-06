@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcin Rzeźniczuk – Technical Project Manager &amp; Senior Data Engineer</title>
+  <meta name="description" content="Strona wizytówka Marcina Rzeźniczuka. Łączę głęboką wiedzę techniczną z zakresu inżynierii danych ze skutecznym zarządzaniem projektami i zwinnym dostarczaniem wartości (Agile/Scrum/Kanban). Współpraca B2B." />
+  <meta name="author" content="Marcin Rzeźniczuk" />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marcin Rzeźniczuk – Technical Project Manager &amp; Senior Data Engineer" />
+  <meta property="og:description" content="Inżynieria danych (Snowflake, dbt, Airflow, Python) oraz Delivery & Agile Management. Współpraca B2B." />
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen flex flex-col justify-between">
+
+  <!-- Nagłówek / Nawigacja -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:bg-blue-700 transition-colors">
+          MR
+        </div>
+        <span class="font-semibold text-slate-900 tracking-tight text-base sm:text-lg">
+          Marcin Rzeźniczuk
+        </span>
+      </a>
+
+      <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
+        <a href="#kompetencje" class="hover:text-blue-600 transition-colors hidden sm:inline-block">Kompetencje</a>
+        <a href="#kontakt" class="hover:text-blue-600 transition-colors hidden sm:inline-block">Kontakt</a>
+        <a href="#kontakt" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+          Współpraca B2B
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sekcja Hero -->
+    <section class="relative pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
+      <!-- Tło gradientowe z delikatną siatką -->
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <!-- Odznaka dostępności B2B -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-medium mb-6">
+            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            Dostępny na kontrakty B2B • Konsultacje i wdrożenia
+          </div>
+
+          <!-- Główny nagłówek -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight sm:leading-none mb-6">
+            Marcin Rzeźniczuk
+            <span class="block text-2xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-700 mt-2">
+              Technical Project Manager &amp; Senior Data Engineer
+            </span>
+          </h1>
+
+          <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8">
+            Łączę zaawansowaną inżynierię nowoczesnych platform danych ze skutecznym, zwinnym zarządzaniem projektami technicznymi. Pomagam organizacjom przekształcać złożone wymagania biznesowe w niezawodną, skalowalną architekturę danych oraz sprawnie działające procesy dostarczania oprogramowania.
+          </p>
+
+          <!-- Przycisk akcji w Hero -->
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#kontakt" class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              <span>Rozpocznijmy współpracę</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-slate-400">
+              <svg class="w-5 h-5 fill-current text-blue-600" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>Profil LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekcja Kompetencje -->
+    <section id="kompetencje" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
+          <h2 class="text-xs sm:text-sm uppercase tracking-wider font-semibold text-blue-600 mb-2">Kluczowe filary</h2>
+          <p class="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">Kompetencje i Obszary Ekspertyzy</p>
+          <p class="mt-3 text-slate-600 text-sm sm:text-base">
+            Synergia głębokiego warsztatu inżynierskiego oraz strategicznego przywództwa projektowego.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+          <!-- Karta 1: Data Engineering -->
+          <div class="flex flex-col justify-between p-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3m-16 5c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3"/>
+                </svg>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                Data Engineering
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                Projektowanie, budowa i optymalizacja nowoczesnych platform analitycznych oraz rurociągów danych. Zapewnienie wysokiej jakości danych, stabilności orkiestracji i efektywności kosztowej w chmurze.
+              </p>
+            </div>
+
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                Technologie &amp; Narzędzia
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Python
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  SQL
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Snowflake
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  dbt
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Apache Airflow
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  DuckDB
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Karta 2: Delivery & Agile Management -->
+          <div class="flex flex-col justify-between p-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                Delivery &amp; Agile Management
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                Zarządzanie dostarczaniem złożonych projektów technologicznych, facylitacja pracy zespołów inżynierskich, usuwanie blokerów i budowanie powtarzalnych, przewidywalnych cykli wydań.
+              </p>
+            </div>
+
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                Metodyki &amp; Praktyki
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Scrum
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Kanban
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
+                  Optymalizacja procesów wytwórczych
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sekcja Kontakt -->
+    <section id="kontakt" class="py-16 sm:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-lg p-8 sm:p-12 relative overflow-hidden">
+          <!-- Dekoracyjny akcent w tle -->
+          <div class="absolute -right-16 -top-16 w-64 h-64 bg-blue-50 rounded-full blur-2xl -z-0"></div>
+
+          <div class="relative z-10">
+            <div class="text-center sm:text-left max-w-2xl">
+              <span class="inline-block text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">
+                Kontakt &amp; Współpraca
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Porozmawiajmy o Twoim projekcie B2B
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+                Poszukujesz doświadczonego lidera technicznego lub eksperta danych do wsparcia transformacji cyfrowej, optymalizacji architektury lub poprowadzenia zespołu? Jestem otwarty na elastyczne formy współpracy w modelu B2B.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100 mb-8">
+              <!-- Lokalizacja -->
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Lokalizacja &amp; Tryb pracy</div>
+                  <div class="text-sm sm:text-base font-semibold text-slate-800 mt-0.5">Ostrów Wielkopolski / praca zdalna</div>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Sieć zawodowa</div>
+                  <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline mt-0.5 block">
+                    linkedin.com/in/marcinrzezniczuk
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Przyciski bezpośredniego kontaktu -->
+            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+              <a href="mailto:kontakt@twojadomena.pl" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <span>Napisz wiadomość (kontakt@twojadomena.pl)</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-slate-300">
+                <span>Wiadomość na LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Stopka -->
+  <footer class="border-t border-slate-200 bg-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
+      <p>&copy; 2026 Marcin Rzeźniczuk. Wszelkie prawa zastrzeżone.</p>
+      <div class="flex items-center gap-6">
+        <span>Model współpracy: B2B</span>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
