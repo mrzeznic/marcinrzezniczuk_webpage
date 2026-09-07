@@ -1,273 +1,1235 @@
 <!DOCTYPE html>
-<html lang="pl" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcin Rzeźniczuk – Technical Project Manager &amp; Senior Data Engineer</title>
-  <meta name="description" content="Strona wizytówka Marcina Rzeźniczuka. Łączę głęboką wiedzę techniczną z zakresu inżynierii danych ze skutecznym zarządzaniem projektami i zwinnym dostarczaniem wartości (Agile/Scrum/Kanban). Współpraca B2B." />
+  <meta name="description" content="Official website of Marcin Rzeźniczuk. 10+ years in IT, Data Engineering &amp; Agile Delivery. Snowflake, dbt, Python, Apache Airflow, AI Agents, Scrum (PSM I), and Kanban (KMP). Experience in Pharma, Logistics, and Enterprise." />
   <meta name="author" content="Marcin Rzeźniczuk" />
   
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Marcin Rzeźniczuk – Technical Project Manager &amp; Senior Data Engineer" />
-  <meta property="og:description" content="Inżynieria danych (Snowflake, dbt, Airflow, Python) oraz Delivery & Agile Management. Współpraca B2B." />
+  <meta property="og:description" content="Bridging modern data engineering with pragmatic agile project management. 10+ years delivering mission-critical data platforms and AI solutions." />
+  <meta property="og:url" content="https://www.marcinrzezniczuk.pl/" />
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Orbitron & Rajdhani + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a'
+              blue: '#1d4ed8',
+              cobalt: '#2563eb',
+              sky: '#38bdf8',
+              dark: '#0f172a'
             }
           },
           fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+            brand: ['Orbitron', 'sans-serif'],
+            tech: ['Rajdhani', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
           }
         }
       }
     };
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Ostre, dynamiczne kształty geometryczne inspirowane identyfikacją wizualną */
+    .polygon-shard-1 {
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .polygon-shard-2 {
+      clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
+    .polygon-shard-arrow {
+      clip-path: polygon(0 0, 75% 50%, 0 100%, 25% 50%);
+    }
+
+    /* Przełączanie wersji językowej: EN (domyślna) vs PL */
+    body.lang-en .lang-pl {
+      display: none !important;
+    }
+    body.lang-pl .lang-en {
+      display: none !important;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900 min-h-screen flex flex-col justify-between">
+<body class="lang-en bg-[#fcfdfe] text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
 
-  <!-- Nagłówek / Nawigacja -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group">
-        <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:bg-blue-700 transition-colors">
-          MR
-        </div>
-        <span class="font-semibold text-slate-900 tracking-tight text-base sm:text-lg">
-          Marcin Rzeźniczuk
+  <!-- Tło geometryczne (dynamiczne trójkąty i błękitne wielokąty w narożnikach) -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden select-none">
+    <!-- Narożnik lewy górny -->
+    <div class="absolute -top-12 -left-12 w-72 sm:w-96 h-72 sm:h-96 bg-blue-700/80 polygon-shard-1 opacity-90"></div>
+    <div class="absolute top-0 left-0 w-80 sm:w-[28rem] h-80 sm:h-[28rem] bg-blue-600/40 polygon-shard-2 opacity-70"></div>
+    <div class="absolute top-16 left-12 sm:left-20 w-48 sm:w-64 h-48 sm:h-64 bg-blue-500/30 polygon-shard-arrow rotate-45 opacity-60"></div>
+    
+    <!-- Narożnik prawy dolny -->
+    <div class="absolute -bottom-16 -right-16 w-80 sm:w-[32rem] h-80 sm:h-[32rem] bg-blue-700/85 rotate-180 polygon-shard-1 opacity-90"></div>
+    <div class="absolute bottom-0 right-0 w-72 sm:w-[26rem] h-72 sm:h-[26rem] bg-blue-600/40 rotate-180 polygon-shard-2 opacity-70"></div>
+    <div class="absolute bottom-20 right-16 sm:right-28 w-44 sm:w-64 h-44 sm:h-64 bg-blue-500/25 polygon-shard-arrow -rotate-135 opacity-60"></div>
+
+    <!-- Siatka techniczna w tle -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:5rem_5rem] [mask-image:radial-gradient(ellipse_70%_70%_at_50%_40%,#000_60%,transparent_100%)] opacity-35"></div>
+  </div>
+
+  <!-- Główny Nagłówek i Nawigacja -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Sygnatura Eksperta -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-brand font-black text-xl sm:text-2xl tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">
+          MARCIN RZEŹNICZUK
+        </span>
+        <span class="font-tech font-bold text-xs sm:text-sm tracking-[0.2em] text-blue-600 -mt-0.5 uppercase">
+          Technical Project Manager &bull; Senior Data Engineer
         </span>
       </a>
 
-      <nav class="flex items-center gap-4 sm:gap-6 text-sm font-medium text-slate-600">
-        <a href="#kompetencje" class="hover:text-blue-600 transition-colors hidden sm:inline-block">Kompetencje</a>
-        <a href="#kontakt" class="hover:text-blue-600 transition-colors hidden sm:inline-block">Kontakt</a>
-        <a href="#kontakt" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-          Współpraca B2B
+      <!-- Menu nawigacyjne + Przełącznik Języka -->
+      <nav class="flex items-center gap-4 sm:gap-6">
+        <div class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-700">
+          <a href="#about" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">About</span>
+            <span class="lang-pl">O mnie</span>
+          </a>
+          <a href="#experience" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">Experience</span>
+            <span class="lang-pl">Doświadczenie</span>
+          </a>
+          <a href="#certifications" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">Certifications</span>
+            <span class="lang-pl">Certyfikaty</span>
+          </a>
+          <a href="#expertise" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">Expertise</span>
+            <span class="lang-pl">Obszary Ekspertyzy</span>
+          </a>
+          <a href="#how-i-work" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">How I Work</span>
+            <span class="lang-pl">Jak pracuję</span>
+          </a>
+          <a href="#contact" class="hover:text-blue-600 transition-colors">
+            <span class="lang-en">Contact</span>
+            <span class="lang-pl">Kontakt</span>
+          </a>
+        </div>
+
+        <!-- Przełącznik języka EN / PL -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-2xs">
+          <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-blue-600 text-white shadow-xs">
+            EN
+          </button>
+          <button id="btn-pl" onclick="setLanguage('pl')" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900">
+            PL
+          </button>
+        </div>
+
+        <!-- Przycisk CTA -->
+        <a href="#contact" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
+          <span class="lang-en">Let's Talk</span>
+          <span class="lang-pl">Porozmawiajmy</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
         </a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Sekcja Hero -->
-    <section class="relative pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
-      <!-- Tło gradientowe z delikatną siatką -->
-      <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-      
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl">
-          <!-- Odznaka dostępności B2B -->
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-medium mb-6">
-            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-            Dostępny na kontrakty B2B • Konsultacje i wdrożenia
-          </div>
+    <!-- Sekcja Hero: Pozycjonowanie Eksperta -->
+    <section class="relative pt-10 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="relative bg-white/95 rounded-3xl border border-slate-200/90 shadow-2xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+          <!-- Wewnętrzne akcenty geometryczne -->
+          <div class="absolute -top-10 -left-10 w-44 h-44 bg-blue-600/15 polygon-shard-1 pointer-events-none"></div>
+          <div class="absolute -bottom-10 -right-10 w-52 h-52 bg-blue-600/15 rotate-180 polygon-shard-1 pointer-events-none"></div>
 
-          <!-- Główny nagłówek -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight sm:leading-none mb-6">
-            Marcin Rzeźniczuk
-            <span class="block text-2xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-700 mt-2">
-              Technical Project Manager &amp; Senior Data Engineer
-            </span>
-          </h1>
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Główny opis po lewej -->
+            <div class="lg:col-span-8 text-left">
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs sm:text-sm font-semibold tracking-wide uppercase mb-6">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
+                <span class="lang-en">10+ Years in Tech &bull; Cloud Platforms &bull; Agile Delivery</span>
+                <span class="lang-pl">10+ lat w IT &bull; Platformy Chmurowe &bull; Zwinny Dowóz Projektów</span>
+              </div>
 
-          <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8">
-            Łączę zaawansowaną inżynierię nowoczesnych platform danych ze skutecznym, zwinnym zarządzaniem projektami technicznymi. Pomagam organizacjom przekształcać złożone wymagania biznesowe w niezawodną, skalowalną architekturę danych oraz sprawnie działające procesy dostarczania oprogramowania.
-          </p>
+              <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                Marcin Rzeźniczuk
+                <span class="block font-brand font-black text-2xl sm:text-4xl lg:text-5xl text-blue-600 mt-2 tracking-wide">
+                  Technical Project Manager &amp; Senior Data Engineer
+                </span>
+              </h1>
 
-          <!-- Przycisk akcji w Hero -->
-          <div class="flex flex-wrap items-center gap-4">
-            <a href="#kontakt" class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-              <span>Rozpocznijmy współpracę</span>
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-slate-400">
-              <svg class="w-5 h-5 fill-current text-blue-600" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-              </svg>
-              <span>Profil LinkedIn</span>
-            </a>
+              <p class="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed mt-6 mb-8 max-w-2xl font-normal">
+                <span class="lang-en">
+                  Bridging modern cloud data engineering with pragmatic agile leadership. Over a decade of experience delivering mission-critical data platforms for pharmaceutical giants, enterprise logistics, and international organizations (Snowflake, dbt, Airflow, AI Agents, Scrum &amp; Kanban).
+                </span>
+                <span class="lang-pl">
+                  Łączę inżynierię nowoczesnych platform danych ze skutecznym, zwinnym zarządzaniem projektami technologicznymi. Ponad dekada doświadczenia w dostarczaniu kluczowych rozwiązań danych dla międzynarodowych firm farmaceutycznych, globalnej logistyki i korporacji (Snowflake, dbt, Airflow, Agenci AI, Scrum i Kanban).
+                </span>
+              </p>
+
+              <!-- Kluczowe atuty eksperckie (Z LinkedIn) -->
+              <div class="flex flex-wrap gap-2 sm:gap-3 mb-8">
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-blue-50/80 border border-blue-200 text-blue-900">
+                  🏅 Scrum.org PSM I &amp; Kanban KMP
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 border border-slate-200 text-slate-800">
+                  ❄️ Snowflake &amp; dbt Certified
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 border border-slate-200 text-slate-800">
+                  🤖 AI Agents &amp; Automation (AI_devs 4)
+                </span>
+                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 border border-slate-200 text-slate-800">
+                  🏥 Pharma &amp; Enterprise Track Record
+                </span>
+              </div>
+
+              <!-- Przyciski CTA -->
+              <div class="flex flex-wrap gap-4 items-center">
+                <a href="#experience" class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
+                  <span class="lang-en">Track Record &amp; Roles</span>
+                  <span class="lang-pl">Ścieżka &amp; Projekty</span>
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </a>
+                <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl shadow-sm hover:border-blue-400 transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 font-tech uppercase tracking-wider">
+                  <span class="lang-en">Get in Touch</span>
+                  <span class="lang-pl">Skontaktuj się</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Podsumowanie kompetencji po prawej -->
+            <div class="lg:col-span-4 space-y-4">
+              <!-- Karta 1: Inżynieria -->
+              <div class="p-6 rounded-2xl bg-slate-50/90 border border-slate-200 shadow-sm">
+                <div class="flex items-center gap-3 text-blue-600 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <h2 class="font-tech font-bold text-lg uppercase tracking-wider text-slate-900">
+                    <span class="lang-en">Data &amp; AI Engineering</span>
+                    <span class="lang-pl">Inżynieria Danych &amp; AI</span>
+                  </h2>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <span class="lang-en">
+                    Snowflake, dbt, Apache Airflow, Python, SQL, DuckDB. Automated data pipelines, cost optimization, and integrating autonomous AI agents.
+                  </span>
+                  <span class="lang-pl">
+                    Snowflake, dbt, Apache Airflow, Python, SQL, DuckDB. Zautomatyzowane rurociągi danych, optymalizacja kosztów chmury i agenci AI.
+                  </span>
+                </p>
+              </div>
+
+              <!-- Karta 2: Delivery -->
+              <div class="p-6 rounded-2xl bg-slate-50/90 border border-slate-200 shadow-sm">
+                <div class="flex items-center gap-3 text-blue-600 mb-2">
+                  <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <h2 class="font-tech font-bold text-lg uppercase tracking-wider text-slate-900">
+                    <span class="lang-en">Delivery &amp; Agile Leadership</span>
+                    <span class="lang-pl">Delivery &amp; Agile Leadership</span>
+                  </h2>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <span class="lang-en">
+                    Technical Project Management (TPM), Certified Scrum Master (PSM I), Kanban Management Professional (KMP), backlog grooming, and delivery cadence.
+                  </span>
+                  <span class="lang-pl">
+                    Technical Project Management (TPM), Certyfikowany Scrum Master (PSM I), Kanban Management Professional (KMP), podział zadań i rytmika wydań.
+                  </span>
+                </p>
+              </div>
+
+              <!-- LinkedIn Profile Box -->
+              <div class="p-5 rounded-xl bg-blue-50/60 border border-blue-200 flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold text-blue-800 uppercase tracking-wider block">
+                    <span class="lang-en">Professional Profile</span>
+                    <span class="lang-pl">Profil zawodowy</span>
+                  </span>
+                  <span class="text-sm font-bold text-slate-900">LinkedIn Network</span>
+                </div>
+                <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-blue-200 text-xs font-bold text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-2xs">
+                  <span class="lang-en">View profile</span>
+                  <span class="lang-pl">Zobacz profil</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Sekcja Kompetencje -->
-    <section id="kompetencje" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-14 sm:mb-16">
-          <h2 class="text-xs sm:text-sm uppercase tracking-wider font-semibold text-blue-600 mb-2">Kluczowe filary</h2>
-          <p class="text-2xl sm:text-4xl font-bold text-slate-900 tracking-tight">Kompetencje i Obszary Ekspertyzy</p>
-          <p class="mt-3 text-slate-600 text-sm sm:text-base">
-            Synergia głębokiego warsztatu inżynierskiego oraz strategicznego przywództwa projektowego.
+    <!-- Sekcja Doświadczenie & Ścieżka Kariery (Z LinkedIn) -->
+    <section id="experience" class="py-16 sm:py-24 bg-white/95 border-y border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <span class="font-tech font-bold text-sm text-blue-600 uppercase tracking-widest block mb-2">
+            <span class="lang-en">Career Milestones</span>
+            <span class="lang-pl">Ścieżka Zawodowa</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span class="lang-en">Proven Enterprise Experience</span>
+            <span class="lang-pl">Doświadczenie w Projektach Enterprise</span>
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            <span class="lang-en">
+              A track record of leading end-to-end data initiatives, managing cloud transformations, and coaching cross-functional engineering teams for international organizations.
+            </span>
+            <span class="lang-pl">
+              Wieloletnie doświadczenie w prowadzeniu złożonych projektów danych, transformacjach chmurowych i facylitacji zespołów inżynierskich w międzynarodowych organizacjach.
+            </span>
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-          <!-- Karta 1: Data Engineering -->
-          <div class="flex flex-col justify-between p-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3m-16 5c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3"/>
-                </svg>
+        <!-- Oś czasu doświadczenia -->
+        <div class="space-y-8">
+          
+          <!-- Rola 1: C&F Technical Project Manager -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-300 transition-all shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/70 pb-5 mb-5">
+              <div>
+                <span class="inline-block px-3 py-1 rounded-md bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-2">
+                  <span class="lang-en">Current Role</span>
+                  <span class="lang-pl">Aktualna rola</span>
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Technical Project Manager</h3>
+                <div class="text-sm font-semibold text-blue-600 mt-0.5">C&amp;F &bull; Pharma Industry Projects</div>
               </div>
-
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
-                Data Engineering
-              </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Projektowanie, budowa i optymalizacja nowoczesnych platform analitycznych oraz rurociągów danych. Zapewnienie wysokiej jakości danych, stabilności orkiestracji i efektywności kosztowej w chmurze.
-              </p>
+              <div class="text-xs sm:text-sm font-tech font-bold text-slate-500 uppercase tracking-wider md:text-right">
+                Sep 2025 &ndash; Present &bull; Remote
+              </div>
             </div>
 
-            <div>
-              <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
-                Technologie &amp; Narzędzia
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Python
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  SQL
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Snowflake
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  dbt
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Apache Airflow
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  DuckDB
-                </span>
-              </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              <span class="lang-en">
+                Leading full-lifecycle cloud data initiatives for top-tier pharmaceutical clients. Connecting business leadership with technical delivery, automating complex data pipelines, and championing practical AI adoption.
+              </span>
+              <span class="lang-pl">
+                Kierowanie pełnym cyklem projektów danych w chmurze dla wiodących klientów farmaceutycznych. Łączenie zarządu z inżynierami, automatyzacja potoków danych i wdrażanie praktycznych narzędzi AI w codziennej pracy zespołu.
+              </span>
+            </p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span class="lang-en"><strong>End-to-End Delivery:</strong> Guided Snowflake &amp; Python cloud setups from architectural design to final production rollout.</span>
+                <span class="lang-pl"><strong>Kompletne Wdrożenia:</strong> Prowadzenie projektów chmurowych (Snowflake, Python) od fazy koncepcyjnej po wdrożenie produkcyjne.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span class="lang-en"><strong>Agile &amp; Kanban Workflows:</strong> Streamlined team velocity, backlog decomposition, and cycle time through tailored Kanban workflows.</span>
+                <span class="lang-pl"><strong>Agile &amp; Kanban:</strong> Optymalizacja tempa pracy zespołu, dekompozycja wymagań i skrócenie czasu realizacji zadań za pomocą Kanban.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span class="lang-en"><strong>Pipeline Automation:</strong> Orchestrated automated data flows using dbt and Apache Airflow, significantly reducing manual overhead.</span>
+                <span class="lang-pl"><strong>Automatyzacja Potoków:</strong> Automatyzacja przepływu danych z wykorzystaniem dbt i Airflow, eliminująca manualną obsługę.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span class="lang-en"><strong>AI &amp; Agentic Tools:</strong> Championed practical generative AI and autonomous agentic workflows to accelerate engineering efficiency.</span>
+                <span class="lang-pl"><strong>Ewangelizacja AI:</strong> Praktyczne wdrożenie narzędzi GenAI i agentów autonomicznych w celu przyspieszenia pracy programistycznej.</span>
+              </li>
+            </ul>
+
+            <div class="pt-5 mt-5 border-t border-slate-200/60 flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Snowflake</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">dbt</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Python</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Airflow</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Kanban</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">AI Agents</span>
             </div>
           </div>
 
-          <!-- Karta 2: Delivery & Agile Management -->
-          <div class="flex flex-col justify-between p-8 rounded-2xl bg-slate-50/70 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-200 transition-all group">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-blue-100/80 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
+          <!-- Rola 2: C&F Senior Data Engineer / Team Coordinator -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-300 transition-all shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/70 pb-5 mb-5">
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900">Senior Data Engineer &bull; Team Coordinator</h3>
+                <div class="text-sm font-semibold text-blue-600 mt-0.5">C&amp;F (via BeeData) &bull; Pharma Industry</div>
               </div>
+              <div class="text-xs sm:text-sm font-tech font-bold text-slate-500 uppercase tracking-wider md:text-right">
+                Apr 2023 &ndash; Sep 2025 &bull; 2 yrs 6 mos
+              </div>
+            </div>
 
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
-                Delivery &amp; Agile Management
-              </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                Zarządzanie dostarczaniem złożonych projektów technologicznych, facylitacja pracy zespołów inżynierskich, usuwanie blokerów i budowanie powtarzalnych, przewidywalnych cykli wydań.
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              <span class="lang-en">
+                Spearheaded cloud-based ETL/ELT solutions using Snowflake, dbt, and Python for global pharmaceutical clients. Combined deep hands-on data engineering with Agile/Kanban team coordination and client training.
+              </span>
+              <span class="lang-pl">
+                Projektowanie i budowa chmurowych potoków ETL/ELT (Snowflake, dbt, Python) dla klientów z sektora pharma. Łączenie pracy inżynierskiej z koordynacją zespołu, mentoringiem i wdrażaniem metodyk zwinnych.
+              </span>
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Snowflake</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">dbt</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Python</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">SQL</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Apache Airflow</span>
+              <span class="px-2.5 py-1 rounded bg-white border border-slate-200">Jira &amp; Confluence</span>
+            </div>
+          </div>
+
+          <!-- Rola 3: Wcześniejsze role enterprise (Siatka 3-kolumnowa) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- JLL -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition-all">
+              <div class="text-xs font-tech font-bold text-blue-600 uppercase mb-1">Mar 2020 &ndash; Sep 2020</div>
+              <h4 class="font-bold text-base text-slate-900 mb-1">Associate &bull; Data &amp; Analytics</h4>
+              <div class="text-xs font-semibold text-slate-500 mb-3">JLL (Warszawa)</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                <span class="lang-en">Data modeling and integration in modern data warehouses. Back-end development on Snowflake, MS SQL Server, and BI delivery.</span>
+                <span class="lang-pl">Modelowanie i integracja danych w hurtowniach danych. Rozwój backendu analitycznego na Snowflake, MS SQL Server i BI.</span>
               </p>
             </div>
 
+            <!-- DB Schenker -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition-all">
+              <div class="text-xs font-tech font-bold text-blue-600 uppercase mb-1">Oct 2017 &ndash; Nov 2019</div>
+              <h4 class="font-bold text-base text-slate-900 mb-1">Data Engineer &bull; Service Consultant</h4>
+              <div class="text-xs font-semibold text-slate-500 mb-3">DB Schenker (Technology Solution Center)</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                <span class="lang-en">Apache Airflow PoC, automated data delivery for Data Science, Docker, AWS, Python, and introducing Scrum framework for application modules.</span>
+                <span class="lang-pl">PoC orkiestracji Apache Airflow dla Data Science, konteneryzacja Docker, AWS, Python oraz wdrożenie Scrum dla rozwoju oprogramowania.</span>
+              </p>
+            </div>
+
+            <!-- T-Mobile / Danone -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition-all">
+              <div class="text-xs font-tech font-bold text-blue-600 uppercase mb-1">2015 &ndash; 2017</div>
+              <h4 class="font-bold text-base text-slate-900 mb-1">Enterprise Analytics &bull; SAP</h4>
+              <div class="text-xs font-semibold text-slate-500 mb-3">T-Mobile Polska &amp; Danone</div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                <span class="lang-en">Foundation in large-scale corporate environments. SAP RE-FX modules support, logistics data analysis, reporting automation, and business process modeling.</span>
+                <span class="lang-pl">Solidne fundamenty w środowiskach korporacyjnych. Wsparcie modułów SAP, analityka łańcucha dostaw, automatyzacja raportowania B2B.</span>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sekcja Certyfikaty i Akredytacje (Z LinkedIn) -->
+    <section id="certifications" class="py-16 sm:py-24 bg-slate-50/70 border-b border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-tech font-bold text-sm text-blue-600 uppercase tracking-widest block mb-2">
+            <span class="lang-en">Accreditations &amp; Continuous Learning</span>
+            <span class="lang-pl">Akredytacje i Certyfikacja</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span class="lang-en">Official Certifications &amp; Credentials</span>
+            <span class="lang-pl">Oficjalne Certyfikaty i Kwalifikacje</span>
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg">
+            <span class="lang-en">
+              Industry-recognized standards in Agile leadership, cutting-edge AI agent architecture, and cloud data platforms.
+            </span>
+            <span class="lang-pl">
+              Branżowe certyfikaty potwierdzające kompetencje w zwinności (Scrum &amp; Kanban), nowoczesnej inżynierii danych i architekturze agentów AI.
+            </span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Kategoria 1: AI, LLM & Automation -->
+          <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
             <div>
-              <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
-                Metodyki &amp; Praktyki
+              <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold mb-6">
+                🤖
               </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Scrum
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Kanban
-                </span>
-                <span class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white border border-slate-200 text-slate-800 shadow-2xs hover:border-blue-400 transition-colors">
-                  Optymalizacja procesów wytwórczych
-                </span>
+              <span class="text-xs font-tech font-bold text-purple-600 uppercase tracking-wider block mb-1">
+                AI &amp; Automation
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                <span class="lang-en">AI Agents &amp; Generative AI</span>
+                <span class="lang-pl">Agenci AI &amp; Generative AI</span>
+              </h3>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-600 font-bold">✓</span>
+                  <div>
+                    <strong>AI_devs 4 Builders</strong>
+                    <div class="text-xs text-slate-500">Issued May 2026 &bull; Advanced Agentic Workflows</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-600 font-bold">✓</span>
+                  <div>
+                    <strong>Ai_devs 3 Agents</strong>
+                    <div class="text-xs text-slate-500">Autonomous multi-agent systems &amp; tools</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-600 font-bold">✓</span>
+                  <div>
+                    <strong>AI Devs 2: Connect GPT-4</strong>
+                    <div class="text-xs text-slate-500">LLM integration with application logic</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-600 font-bold">✓</span>
+                  <div>
+                    <strong>AI in Business Development</strong>
+                    <div class="text-xs text-slate-500">Google Certification</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-purple-600 font-bold">✓</span>
+                  <div>
+                    <strong>AI_managers 2</strong>
+                    <div class="text-xs text-slate-500">Managing AI-driven technical initiatives</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kategoria 2: Agile, Scrum & Kanban -->
+          <div class="p-8 rounded-2xl bg-white border border-blue-200 shadow-sm flex flex-col justify-between relative">
+            <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider">
+              Leadership
+            </div>
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold mb-6">
+                🎯
+              </div>
+              <span class="text-xs font-tech font-bold text-blue-600 uppercase tracking-wider block mb-1">
+                Agile Leadership
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                <span class="lang-en">Scrum &amp; Kanban University</span>
+                <span class="lang-pl">Scrum &amp; Kanban University</span>
+              </h3>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <div>
+                    <strong>Professional Scrum Master™ I (PSM I)</strong>
+                    <div class="text-xs text-slate-500">Scrum.org &bull; Global Scrum standard</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <div>
+                    <strong>Kanban Management Professional (KMP)</strong>
+                    <div class="text-xs text-slate-500">Kanban University &bull; Flow &amp; WIP optimization</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <div>
+                    <strong>Kanban System Design &amp; Improvement (KSD/KSI)</strong>
+                    <div class="text-xs text-slate-500">Kanban University</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <div>
+                    <strong>First Time Manager</strong>
+                    <div class="text-xs text-slate-500">EY Academy of Business Polska</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <div>
+                    <strong>ITIL Foundation</strong>
+                    <div class="text-xs text-slate-500">PeopleCert &bull; IT Service Management</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kategoria 3: Cloud & Data Engineering -->
+          <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center font-bold mb-6">
+                ❄️
+              </div>
+              <span class="text-xs font-tech font-bold text-cyan-600 uppercase tracking-wider block mb-1">
+                Data Platforms
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-4">
+                <span class="lang-en">Snowflake &amp; Data Engineering</span>
+                <span class="lang-pl">Snowflake &amp; Inżynieria Danych</span>
+              </h3>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-600 font-bold">✓</span>
+                  <div>
+                    <strong>Snowflake: Data Engineering</strong>
+                    <div class="text-xs text-slate-500">Hands-On Essentials Certification</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-600 font-bold">✓</span>
+                  <div>
+                    <strong>Snowflake: Data Warehouse &amp; Apps</strong>
+                    <div class="text-xs text-slate-500">Architecture, Performance &amp; Data Sharing</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-600 font-bold">✓</span>
+                  <div>
+                    <strong>DataCamp: Intermediate Python</strong>
+                    <div class="text-xs text-slate-500">Production data scripting</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-600 font-bold">✓</span>
+                  <div>
+                    <strong>DataWorkshop Machine Learning Challenge</strong>
+                    <div class="text-xs text-slate-500">3rd Transformation &bull; Practical ML pipelines</div>
+                  </div>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-600 font-bold">✓</span>
+                  <div>
+                    <strong>TOEIC Language Certification (B2 Level)</strong>
+                    <div class="text-xs text-slate-500">ETS EMEA &bull; Fluent Professional English</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sekcja O mnie / Wyróżniki Eksperckie -->
+    <section id="about" class="py-16 sm:py-24 bg-white/95 border-b border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <span class="font-tech font-bold text-sm text-blue-600 uppercase tracking-widest block mb-2">
+            <span class="lang-en">Why Work With Me</span>
+            <span class="lang-pl">Dlaczego warto współpracować</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span class="lang-en">Bridging Hardcore Engineering and Business Delivery</span>
+            <span class="lang-pl">Most pomiędzy twardą technologią a biznesowym delivery</span>
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
+            <span class="lang-en">
+              Most data initiatives struggle not from a lack of tooling, but from a communication divide between engineering craftsmanship and executive priorities. My role is to bridge this gap: delivering uncompromised technical quality and scalable cloud architectures, while maintaining predictable sprint delivery, budget discipline, and clear alignment with business value.
+            </span>
+            <span class="lang-pl">
+              Większość projektów danych napotyka trudności nie z powodu braku narzędzi, lecz z braku zrozumienia wzajemnych potrzeb inżynierii i biznesu. Moja rola polega na połączeniu tych dwóch światów: dbam o bezkompromisową jakość techniczną kodu i architektury, jednocześnie pilnując harmonogramu, budżetu oraz realnej wartości rynkowej.
+            </span>
+          </p>
+        </div>
+
+        <!-- 3 filary podejścia -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Karta 1 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-400 hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              <span class="lang-en">Engineering Rigor</span>
+              <span class="lang-pl">Inżynierska Precyzja</span>
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              <span class="lang-en">
+                Hands-on mastery of the modern data stack (Snowflake, dbt, Python, SQL, DuckDB, Airflow). Designing modular, maintainable, and cloud cost-optimized data lakehouses and pipelines.
+              </span>
+              <span class="lang-pl">
+                Praktyczna znajomość nowoczesnych narzędzi (Snowflake, dbt, Python, SQL, DuckDB, Airflow). Projektuję rozwiązania skalowalne, modularne, zoptymalizowane pod kątem kosztów i łatwe w długofalowym utrzymaniu.
+              </span>
+            </p>
+          </div>
+
+          <!-- Karta 2 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-400 hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              <span class="lang-en">Predictable Delivery</span>
+              <span class="lang-pl">Przewidywalne Delivery</span>
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              <span class="lang-en">
+                Proven agile leadership (PSM I, KMP, TPM). Eliminating delivery bottlenecks, setting up clear engineering rhythms, reducing work-in-progress (WIP), and establishing end-to-end accountability.
+              </span>
+              <span class="lang-pl">
+                Jako certyfikowany praktyk zwinny (PSM I, KMP, TPM) eliminuję chaos w projektach. Wprowadzam przejrzyste ramy pracy, usuwam blokery, optymalizuję przepływ i buduję kulturę odpowiedzialności w zespołach.
+              </span>
+            </p>
+          </div>
+
+          <!-- Karta 3 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-blue-400 hover:shadow-md transition-all">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">
+              <span class="lang-en">Business Outcome Focus</span>
+              <span class="lang-pl">Zorientowanie na Wynik</span>
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              <span class="lang-en">
+                Technology serves business outcomes. Every architectural and process improvement is treated as an investment designed to maximize ROI, accelerate decision-making, and unlock strategic market value.
+              </span>
+              <span class="lang-pl">
+                Nie wdrażam technologii dla samej technologii. Każde rozwiązanie traktuję jako inwestycję, która ma przynieść konkretny zwrot (ROI), przyspieszyć procesy decyzyjne lub usprawnić operacje firmy.
+              </span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sekcja Obszary Ekspertyzy (9 filarów z wizytówki) -->
+    <section id="expertise" class="py-16 sm:py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-tech font-bold text-sm text-blue-600 uppercase tracking-widest block mb-2">
+            <span class="lang-en">Competency Portfolio</span>
+            <span class="lang-pl">Portfolio Kompetencji</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span class="lang-en">Areas of Technical &amp; Leadership Expertise</span>
+            <span class="lang-pl">Obszary Ekspertyzy Technicznej i Zarządczej</span>
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg">
+            <span class="lang-en">
+              The full scope of engineering advisory and delivery leadership I provide to organizations scaling their data capabilities.
+            </span>
+            <span class="lang-pl">
+              Zakres usług i doradztwa, które dostarczam organizacjom poszukującym silnego przywództwa w danych i metodykach zwinnych.
+            </span>
+          </p>
+        </div>
+
+        <!-- Filar 1: Data & AI Solutions -->
+        <div class="mb-16">
+          <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3m-16 5c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-brand font-bold text-xl sm:text-2xl text-slate-900 tracking-wide">
+                DATA &amp; AI SOLUTIONS
+              </h3>
+              <p class="text-sm text-slate-500 font-medium">
+                <span class="lang-en">Cloud Architecture, Data Pipelines &amp; Analytical Advisory</span>
+                <span class="lang-pl">Architektura, potoki danych i doradztwo analityczne</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Usługa 1 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Engineering</span>
+                  <span class="lang-pl">Inżynieria</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  DATA ENGINEERING
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Designing and building scalable data pipelines (ETL/ELT), robust cloud data modeling, production-grade clean code, and query optimization.
+                  </span>
+                  <span class="lang-pl">
+                    Projektowanie i implementacja skalowalnych potoków danych (ETL/ELT), modelowanie hurtowni danych w chmurze, dbałość o czystość kodu i optymalizację zapytań.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Snowflake</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">dbt</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Python</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">SQL</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Airflow</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">DuckDB</span>
+              </div>
+            </div>
+
+            <!-- Usługa 2 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">AI Advisory</span>
+                  <span class="lang-pl">Doradztwo AI</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  DATA AND AI CONSULTING
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Assessing organizational and technical data readiness for AI implementations. Crafting data strategies for LLM-powered systems, autonomous agents, and ML workflows.
+                  </span>
+                  <span class="lang-pl">
+                    Ocena gotowości organizacyjnej i technologicznej pod wdrożenia sztucznej inteligencji. Strategia przygotowania danych pod modele ML, agentów AI i aplikacje LLM.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">AI Readiness</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Autonomous Agents</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">LLM Data Ops</span>
+              </div>
+            </div>
+
+            <!-- Usługa 3 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Business &amp; Strategy</span>
+                  <span class="lang-pl">Biznes &amp; Strategia</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  DATA-DRIVEN BUSINESS CONSULTING
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Translating executive business vision into concrete data engineering initiatives. Establishing single-source-of-truth architectures that empower reliable decisions.
+                  </span>
+                  <span class="lang-pl">
+                    Przekładanie wizji biznesowej zarządu na konkretne inicjatywy inżynierskie. Budowanie procesów podejmowania decyzji w oparciu o wiarygodne dane źródłowe.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Data Strategy</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Data ROI</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Governance</span>
+              </div>
+            </div>
+
+            <!-- Usługa 4 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Reporting</span>
+                  <span class="lang-pl">Raportowanie</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  BUSINESS INTELLIGENCE AND REPORTING
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Designing and automating executive dashboards, operational reporting, and data governance frameworks to ensure reliable KPI tracking and continuous data quality.
+                  </span>
+                  <span class="lang-pl">
+                    Tworzenie przejrzystych, zautomatyzowanych dashboardów menedżerskich i analitycznych. Dbałość o „pojedyncze źródło prawdy” (Single Source of Truth) i audyt jakości danych.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Executive Dashboards</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Quality Audits</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">KPIs</span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Filar 2: Agile & Delivery Leadership -->
+        <div>
+          <div class="flex items-center gap-3 mb-8 border-b border-slate-200 pb-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold shadow-sm">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-brand font-bold text-xl sm:text-2xl text-slate-900 tracking-wide">
+                AGILE &amp; DELIVERY LEADERSHIP
+              </h3>
+              <p class="text-sm text-slate-500 font-medium">
+                <span class="lang-en">Technical Project Management, Agile Facilitation &amp; Engineering Leadership</span>
+                <span class="lang-pl">Zarządzanie projektami technologicznymi, facylitacja i przywództwo zespołów</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Usługa 1 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Agile Frameworks</span>
+                  <span class="lang-pl">Ramy Zwinne</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  SCRUM
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Implementing and auditing Scrum frameworks in engineering teams. High-impact ceremony facilitation, sprint rhythm stabilization, and continuous retrospective improvements.
+                  </span>
+                  <span class="lang-pl">
+                    Wdrażanie i audyt ram Scrum w zespołach inżynierskich. Skuteczna facylitacja ceremonii, stabilizacja rytmiki sprintów i ciągłe doskonalenie w oparciu o wnioski z retrospektyw.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">PSM I Certified</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Sprint Delivery</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Facilitation</span>
+              </div>
+            </div>
+
+            <!-- Usługa 2 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Culture &amp; Leadership</span>
+                  <span class="lang-pl">Kultura Organizacyjna</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  AGILE LEADERSHIP
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Cultivating high-trust, transparent, and autonomous engineering environments. Transforming team dynamics through servant leadership and eliminating cross-departmental silos.
+                  </span>
+                  <span class="lang-pl">
+                    Budowanie środowiska opartego na zaufaniu, przejrzystości i autonomii inżynierów. Transformacja stylu zarządzania w kierunku Servant Leadership i eliminacji silosów informacyjnych.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Servant Leadership</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Autonomy</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">EY Academy</span>
+              </div>
+            </div>
+
+            <!-- Usługa 3 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Technical Teams</span>
+                  <span class="lang-pl">Zespoły Technologiczne</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  DATA TEAM LEADERSHIP
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Hands-on technical leadership for Data Engineers and BI Developers. Mentoring, onboarding, CI/CD adoption, and establishing code review and engineering excellence standards.
+                  </span>
+                  <span class="lang-pl">
+                    Praktyczne przywództwo techniczne dla inżynierów danych i deweloperów BI. Mentoring, onboarding, podnoszenie kultury inżynierskiej, standardy Code Review i CI/CD.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Tech Mentoring</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Engineering Standards</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Talent Growth</span>
+              </div>
+            </div>
+
+            <!-- Usługa 4 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Project Management</span>
+                  <span class="lang-pl">Zarządzanie Projektami</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  DATA PROJECTS MANAGEMENT
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Full-lifecycle Technical Project Management (TPM). Handling scope, budget, milestones, risk management, and multi-stakeholder communication in complex data initiatives.
+                  </span>
+                  <span class="lang-pl">
+                    Kompleksowe zarządzanie projektami w roli Technical Project Managera (TPM). Zarządzanie zakresem, budżetem, harmonogramem, ryzykiem i interesariuszami w złożonych wdrożeniach.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">TPM</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Milestones &amp; Risk</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Stakeholder Mgmt</span>
+              </div>
+            </div>
+
+            <!-- Usługa 5 -->
+            <div class="p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between group lg:col-span-2">
+              <div>
+                <div class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <span class="lang-en">Flow Efficiency</span>
+                  <span class="lang-pl">Efektywność Przepływu</span>
+                </div>
+                <h4 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  KANBAN COACHING AND IMPLEMENTATION
+                </h4>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  <span class="lang-en">
+                    Certified Kanban Management Professional (KMP). Workflow visualization, work-in-progress (WIP) limits, bottleneck elimination, and cycle time reduction using flow metrics.
+                  </span>
+                  <span class="lang-pl">
+                    Certyfikowany Kanban Management Professional (KMP). Wizualizacja procesów wytwórczych, limitowanie pracy w toku (WIP), eliminacja zatorów oraz optymalizacja kluczowych metryk przepływu.
+                  </span>
+                </p>
+              </div>
+              <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-xs text-slate-700 font-medium">
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">KMP Certified</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">WIP Limits</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Cycle Time Reduction</span>
+                <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200">Flow Metrics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Sekcja Jak Pracuję / Modele Zaangażowania -->
+    <section id="how-i-work" class="py-16 sm:py-24 bg-white/95 border-t border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="font-tech font-bold text-sm text-blue-600 uppercase tracking-widest block mb-2">
+            <span class="lang-en">Flexible Engagement</span>
+            <span class="lang-pl">Elastyczne Zaangażowanie</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <span class="lang-en">Collaboration Models</span>
+            <span class="lang-pl">Modele Współpracy</span>
+          </h2>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg">
+            <span class="lang-en">
+              Tailoring the engagement structure to your organization's exact needs, maturity, and project lifecycle stage.
+            </span>
+            <span class="lang-pl">
+              Dostosowuję formułę zaangażowania do aktualnej skali wyzwań i dojrzałości technologicznej Twojej organizacji.
+            </span>
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Model 1 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 block mb-2">
+                <span class="lang-en">Model 1</span>
+                <span class="lang-pl">Formuła 1</span>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">
+                <span class="lang-en">Architecture Audit &amp; Strategic Advisory</span>
+                <span class="lang-pl">Audyt &amp; Doradztwo Strategiczne</span>
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <span class="lang-en">
+                  Focused, timeboxed diagnostic sprints. Evaluating existing data architecture, identifying technical debt, reviewing agile practices, and delivering actionable roadmaps.
+                </span>
+                <span class="lang-pl">
+                  Skondensowane, kilkutygodniowe sprinty analityczne. Przegląd obecnej architektury danych, identyfikacja długu technologicznego, audyt procesów zwinnych oraz opracowanie konkretnego planu transformacji.
+                </span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <span class="lang-en">Best for: Strategy Kickoff / Diagnostic</span>
+              <span class="lang-pl">Idealne na: Start transformacji / Diagnozę problemu</span>
+            </div>
+          </div>
+
+          <!-- Model 2 -->
+          <div class="p-8 rounded-2xl bg-blue-50/70 border border-blue-200 flex flex-col justify-between relative shadow-sm">
+            <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider">
+              <span class="lang-en">Most Popular</span>
+              <span class="lang-pl">Najpopularniejszy</span>
+            </div>
+            <div>
+              <span class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 block mb-2">
+                <span class="lang-en">Model 2</span>
+                <span class="lang-pl">Formuła 2</span>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">
+                <span class="lang-en">Fractional TPM / Data Lead</span>
+                <span class="lang-pl">Fractional TPM / Data Lead</span>
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <span class="lang-en">
+                  Part-time senior leadership embedded in your organization (1–3 days/week). Guiding team delivery, facilitating sprints, removing blockers, and overseeing architectural milestones.
+                </span>
+                <span class="lang-pl">
+                  Wsparcie w wymiarze cząstkowym (np. 1–3 dni w tygodniu). Obejmuję rolę lidera technicznego lub menedżera projektu, ustawiam procesy delivery, facylituję zespół i nadzoruję kluczowe wdrożenia.
+                </span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-blue-200 text-xs font-semibold text-blue-800 uppercase tracking-wider">
+              <span class="lang-en">Best for: Scaling Teams / Key Delivery Phase</span>
+              <span class="lang-pl">Idealne na: Skalowanie / Kluczowe etapy wdrożenia</span>
+            </div>
+          </div>
+
+          <!-- Model 3 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-tech font-bold uppercase tracking-wider text-blue-600 block mb-2">
+                <span class="lang-en">Model 3</span>
+                <span class="lang-pl">Formuła 3</span>
+              </span>
+              <h3 class="text-xl font-bold text-slate-900 mb-3">
+                <span class="lang-en">Hands-on Engineering &amp; Delivery</span>
+                <span class="lang-pl">Wdrożenia Hands-on Engineering</span>
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                <span class="lang-en">
+                  Direct technical implementation. Writing production code for data pipelines (Snowflake, dbt, Python, Airflow), executing cloud migrations, and automating testing and orchestration.
+                </span>
+                <span class="lang-pl">
+                  Bezpośrednia realizacja inżynierska. Projektowanie i pisanie kodu potoków danych (Snowflake, dbt, Python, Airflow), migracje do chmury oraz automatyzacja testów i orkiestracji.
+                </span>
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+              <span class="lang-en">Best for: New Platforms / Cloud Migrations</span>
+              <span class="lang-pl">Idealne na: Nowe platformy danych / Migracje</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- Sekcja Kontakt -->
-    <section id="kontakt" class="py-16 sm:py-24">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-3xl border border-slate-200 shadow-lg p-8 sm:p-12 relative overflow-hidden">
-          <!-- Dekoracyjny akcent w tle -->
-          <div class="absolute -right-16 -top-16 w-64 h-64 bg-blue-50 rounded-full blur-2xl -z-0"></div>
+    <section id="contact" class="py-16 sm:py-24 bg-white/95 border-t border-slate-200/80">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-3xl p-8 sm:p-14 shadow-2xl relative overflow-hidden">
+          
+          <!-- Geometryczny akcent w tle -->
+          <div class="absolute -right-16 -bottom-16 w-80 h-80 bg-blue-600/30 polygon-shard-1 rotate-45 pointer-events-none"></div>
 
           <div class="relative z-10">
-            <div class="text-center sm:text-left max-w-2xl">
-              <span class="inline-block text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2">
-                Kontakt &amp; Współpraca
+            <div class="max-w-2xl">
+              <span class="font-tech font-bold text-sm text-blue-400 uppercase tracking-widest block mb-2">
+                <span class="lang-en">Get in Touch</span>
+                <span class="lang-pl">Nawiąż kontakt</span>
               </span>
-              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
-                Porozmawiajmy o Twoim projekcie B2B
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-white">
+                <span class="lang-en">Let's Discuss Your Next Initiative</span>
+                <span class="lang-pl">Porozmawiajmy o Twoim projekcie</span>
               </h2>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
-                Poszukujesz doświadczonego lidera technicznego lub eksperta danych do wsparcia transformacji cyfrowej, optymalizacji architektury lub poprowadzenia zespołu? Jestem otwarty na elastyczne formy współpracy w modelu B2B.
+              <p class="text-slate-300 text-base leading-relaxed mb-8">
+                <span class="lang-en">
+                  Looking for an independent data engineering advisor, an experienced Technical Project Manager, or architectural guidance for your data team? Reach out directly &mdash; I'd be glad to discuss your organization's goals.
+                </span>
+                <span class="lang-pl">
+                  Szukasz niezależnego doradcy do spraw inżynierii danych, doświadczonego Technical Project Managera lub chcesz skonsultować architekturę w swojej firmie? Napisz bezpośrednio &mdash; chętnie omówię wyzwania Twojego zespołu.
+                </span>
               </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-800 mb-8">
               <!-- Lokalizacja -->
-              <div class="flex items-start gap-3">
-                <div class="w-10 h-10 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
+              <div class="flex items-start gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
                 </div>
                 <div>
-                  <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Lokalizacja &amp; Tryb pracy</div>
-                  <div class="text-sm sm:text-base font-semibold text-slate-800 mt-0.5">Ostrów Wielkopolski / praca zdalna</div>
+                  <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                    <span class="lang-en">Location &amp; Reach</span>
+                    <span class="lang-pl">Lokalizacja &amp; Zasięg</span>
+                  </div>
+                  <div class="text-sm sm:text-base font-semibold text-white mt-0.5">
+                    <span class="lang-en">Remote Worldwide &bull; Hybrid: Ostrów Wielkopolski (+50 km)</span>
+                    <span class="lang-pl">Zdalnie: cały świat &bull; Hybrydowo: Ostrów Wielkopolski (+50 km)</span>
+                  </div>
                 </div>
               </div>
 
               <!-- LinkedIn -->
-              <div class="flex items-start gap-3">
-                <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <div class="flex items-start gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-slate-800/90 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
                   <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                 </div>
                 <div>
-                  <div class="text-xs font-medium text-slate-400 uppercase tracking-wider">Sieć zawodowa</div>
-                  <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-blue-600 hover:text-blue-700 hover:underline mt-0.5 block">
+                  <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                    <span class="lang-en">Professional Network</span>
+                    <span class="lang-pl">Sieć zawodowa</span>
+                  </div>
+                  <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-blue-400 hover:text-blue-300 transition-colors mt-0.5 block">
                     linkedin.com/in/marcinrzezniczuk
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Przyciski bezpośredniego kontaktu -->
-            <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
-              <a href="mailto:kontakt@twojadomena.pl" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Przyciski akcji -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="mailto:marcin.rzezniczuk@gmail.com" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold text-slate-900 bg-white hover:bg-blue-50 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white font-tech uppercase tracking-wider">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                <span>Napisz wiadomość (kontakt@twojadomena.pl)</span>
+                <span>marcin.rzezniczuk@gmail.com</span>
               </a>
 
-              <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-slate-300">
-                <span>Wiadomość na LinkedIn</span>
+              <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 text-base font-bold text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-slate-500 font-tech uppercase tracking-wider">
+                <span class="lang-en">Message on LinkedIn</span>
+                <span class="lang-pl">Wiadomość na LinkedIn</span>
               </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -276,17 +1238,62 @@
 
   <!-- Stopka -->
   <footer class="border-t border-slate-200 bg-white py-8">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
-      <p>&copy; 2026 Marcin Rzeźniczuk. Wszelkie prawa zastrzeżone.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-slate-900">Marcin Rzeźniczuk</span>
+        <span>&bull;</span>
+        <span>&copy; 2026 
+          <span class="lang-en">All rights reserved.</span>
+          <span class="lang-pl">Wszelkie prawa zastrzeżone.</span>
+        </span>
+      </div>
       <div class="flex items-center gap-6">
-        <span>Model współpracy: B2B</span>
-        <span>•</span>
+        <span class="font-tech font-bold tracking-widest text-slate-600 uppercase">Technical Project Manager &bull; Senior Data Engineer</span>
+        <span>&bull;</span>
         <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
           LinkedIn
         </a>
       </div>
     </div>
   </footer>
+
+  <!-- Skrypt obsługujący przełącznik wersji językowej -->
+  <script>
+    function setLanguage(lang) {
+      const btnEn = document.getElementById('btn-en');
+      const btnPl = document.getElementById('btn-pl');
+
+      if (lang === 'pl') {
+        document.body.classList.remove('lang-en');
+        document.body.classList.add('lang-pl');
+        document.documentElement.lang = 'pl';
+        localStorage.setItem('mr_preferred_lang', 'pl');
+
+        // Style aktywnego przycisku PL
+        btnPl.className = 'px-3 py-1 text-xs font-bold rounded-lg transition-all bg-blue-600 text-white shadow-xs';
+        btnEn.className = 'px-3 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900';
+      } else {
+        document.body.classList.remove('lang-pl');
+        document.body.classList.add('lang-en');
+        document.documentElement.lang = 'en';
+        localStorage.setItem('mr_preferred_lang', 'en');
+
+        // Style aktywnego przycisku EN (domyślny)
+        btnEn.className = 'px-3 py-1 text-xs font-bold rounded-lg transition-all bg-blue-600 text-white shadow-xs';
+        btnPl.className = 'px-3 py-1 text-xs font-bold rounded-lg transition-all text-slate-600 hover:text-slate-900';
+      }
+    }
+
+    // Inicjalizacja: domyślnie angielski (EN), chyba że użytkownik wcześniej wybrał PL
+    (() => {
+      const savedLang = localStorage.getItem('mr_preferred_lang');
+      if (savedLang === 'pl') {
+        setLanguage('pl');
+      } else {
+        setLanguage('en');
+      }
+    })();
+  </script>
 
 </body>
 </html>
