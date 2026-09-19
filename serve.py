@@ -81,6 +81,16 @@ class FileWatcher:
             time.sleep(0.3)
             current_mtimes = self._scan_mtimes()
             if current_mtimes != self.last_mtimes:
+                # Jeśli zmodyfikowano szablon główny, automatycznie przebuduj strony
+                template_file = str(self.watch_path / "src" / "template.html")
+                if current_mtimes.get(template_file) != self.last_mtimes.get(template_file):
+                    try:
+                        from build_i18n import compile_pages
+                        compile_pages()
+                        current_mtimes = self._scan_mtimes()
+                    except Exception as e:
+                        print(f"[Bilingual Compiler Error]: {e}")
+
                 self.last_mtimes = current_mtimes
                 with self._lock:
                     for evt in self.subscribers:
@@ -145,6 +155,13 @@ class ThreadedHTTPServer(socketserver.ThreadingMixIn, http.server.HTTPServer):
     allow_reuse_address = True
 
 def main():
+    # Automatyczna kompilacja wersji językowych przed uruchomieniem
+    try:
+        from build_i18n import compile_pages
+        compile_pages()
+    except Exception as e:
+        print(f"[Bilingual Compiler Warning]: {e}")
+
     # Uruchomienie wątku obserwującego pliki w tle
     watch_thread = threading.Thread(target=watcher.run, daemon=True)
     watch_thread.start()

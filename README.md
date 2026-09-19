@@ -1,6 +1,6 @@
 # Marcin Rzeźniczuk – Personal Expert Website
 
-Oficjalna, dwujęzyczna (EN/PL) strona internetowa **Marcina Rzeźniczuka** – Technical Project Manager & Senior Data Engineer. Serwis prezentuje ponad 10 lat komercyjnego doświadczenia w inżynierii nowoczesnych platform danych (Modern Data Stack) oraz zwinnym przywództwie i zarządzaniu projektami technologicznymi (Agile Delivery, Scrum, Kanban) dla sektora farmaceutycznego, logistycznego i korporacyjnego.
+Oficjalna, dwujęzyczna (EN/PL) strona internetowa **Marcina Rzeźniczuka** – Technical Project Manager & AI Product Lead. Serwis prezentuje ponad 10 lat doświadczenia w realizacji złożonych inicjatyw technologicznych, zwinnego dostarczania produktów opartych o LLM/AI (Agile/TPM) oraz solidnych fundamentach architektonicznych platform danych (Modern Data Stack, Lakehouses) dla sektora farmaceutycznego, logistycznego i korporacyjnego.
 
 Strona jest wdrożona na **GitHub Pages** i dostępna pod domeną [www.marcinrzezniczuk.pl](https://www.marcinrzezniczuk.pl).
 
@@ -9,9 +9,10 @@ Strona jest wdrożona na **GitHub Pages** i dostępna pod domeną [www.marcinrze
 ## 🧭 Kluczowe moduły strony
 
 ### 1. Doświadczenie Zawodowe (Career Track Record)
-- **C&F (Sep 2025 – Present):** Technical Project Manager – projekty chmurowe dla globalnych koncernów farmaceutycznych, automatyzacja potoków (Snowflake, dbt, Airflow), facylitacja Kanban i wdrażanie agentów AI.
-- **C&F / BeeData (Apr 2023 – Sep 2025):** Senior Data Engineer / Team Coordinator – architektura ETL/ELT, mentoring techniczny i koordynacja zwinna zespołów inżynierskich.
-- **JLL (2020):** Associate, Data & Analytics – modelowanie hurtowni danych i rozwój backendu (Snowflake, MS SQL Server, Python).
+- **C&F (2025 – obecnie):** Technical Project Manager – zarządzanie produktami i inicjatywami chmurowymi dla globalnych koncernów farmaceutycznych, optymalizacja strumienia wartości (Value Stream), orkiestracja wdrożeń AI/LLM i facylitacja delivery.
+- **C&F (2023 – 2025):** Senior Data Engineer / Team Coordinator – architektura ETL/ELT (Snowflake, dbt), koordynacja zwinnych zespołów inżynierskich i standardy Data Governance.
+- **C&F (2020 – 2023):** Data Engineer – projektowanie potoków danych, modelowanie struktur hurtowni w chmurze i integracja procesów ETL/ELT (Snowflake, SQL, Python).
+- **JLL (2020):** Associate, Data & Analytics – modelowanie hurtowni danych i rozwój backendu analitycznego (Snowflake, MS SQL Server, Python).
 - **DB Schenker (2017 – 2019):** Data Engineer & Service Consultant – PoC Apache Airflow, konteneryzacja Docker, wdrożenie Scrum i pipeline'y dla Data Science.
 - **T-Mobile Polska & Danone (2015 – 2017):** Analityka biznesowa, wsparcie systemów SAP ERP i automatyzacja raportowania.
 
@@ -21,7 +22,7 @@ Strona jest wdrożona na **GitHub Pages** i dostępna pod domeną [www.marcinrze
 - **Data Platforms:** Snowflake Hands On Essentials (Data Engineering, DWH, Data Applications, Sharing), Python, DataCamp, DataWorkshop ML Challenges.
 
 ### 3. Portfolio Kompetencji (9 obszarów)
-- **Data & AI Solutions:** Data Engineering, Data and AI Consulting, Data-Driven Business Consulting, Business Intelligence & Reporting.
+- **Data & AI Solutions:** AI Product Management & Advisory, Data-Driven Business Consulting, Data Architecture & Engineering, Business Intelligence & Reporting.
 - **Delivery & Agile Leadership:** Scrum, Agile Leadership, Data Team Leadership, Data Projects Management (TPM), Kanban Coaching & Implementation.
 
 ---
@@ -30,19 +31,24 @@ Strona jest wdrożona na **GitHub Pages** i dostępna pod domeną [www.marcinrze
 
 - **Frontend:** Czysty HTML5 zoptymalizowany pod kątem Core Web Vitals i urządzeń mobilnych.
 - **Styling:** Tailwind CSS (CDN) z dynamicznymi geometrycznymi motywami w odcieniach błękitu i kobaltu.
-- **Wielojęzyczność (i18n):** Domyślny język angielski (EN) z możliwością natychmiastowego przełączenia na język polski (PL) za pomocą przycisku w nagłówku i pamięcią wyboru (`localStorage`).
+- **Wielojęzyczność & SEO (i18n):** 
+  - Fizyczne, dedykowane adresy URL pod kątem wyszukiwarek (Googlebot):
+    - **`https://www.marcinrzezniczuk.pl/`** – wersja angielska (`lang="en"`, 100% czysty angielski kod HTML).
+    - **`https://www.marcinrzezniczuk.pl/pl/`** – wersja polska (`lang="pl"`, 100% czysty polski kod HTML).
+  - Wzajemne powiązanie tagami `<link rel="alternate" hreflang="..." />` (en, pl, x-default) oraz deklaracja w `sitemap.xml` (`xhtml:link`).
+  - Pojedyncze źródło prawdy: `src/template.html` – kompilowane skryptem `build_i18n.py`.
 - **Hosting & CI/CD:** GitHub Pages napędzane procesem GitHub Actions (`.github/workflows/deploy.yml`).
 
 ---
 
-## 💻 Podgląd lokalny z automatycznym odświeżaniem (Live Reload)
+## 💻 Podgląd lokalny i kompilacja (Live Reload)
 
-Repozytorium zawiera gotowy skrypt deweloperski [`serve.py`](./serve.py), który uruchamia lokalny serwer i **automatycznie odświeża otwartą stronę w przeglądarce za każdym razem, gdy zapiszesz zmiany w plikach**:
+Repozytorium zawiera gotowy skrypt deweloperski [`serve.py`](./serve.py), który automatycznie kompiluje wersje językowe (`build_i18n.py`) i odświeża stronę w przeglądarce przy każdej zmianie w `src/template.html`:
 
 ```bash
 python3 serve.py
-# lub bezpośrednio:
-./serve.py
+# lub bezpośrednio kompilacja stron:
+python3 build_i18n.py
 ```
 
 Skrypt automatycznie otworzy adres [http://localhost:8000](http://localhost:8000) w domyślnej przeglądarce. Korzysta wyłącznie ze standardowej biblioteki Pythona 3.
