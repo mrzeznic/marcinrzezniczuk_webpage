@@ -15,6 +15,9 @@
   <!-- Theme Color & Mobile Chrome -->
   <meta name="theme-color" content="#1d4ed8" />
   <meta name="color-scheme" content="light" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
@@ -51,7 +54,7 @@
     "description": "Official portfolio of Marcin Rzeźniczuk. Technical Project Manager & AI Product Lead specializing in AI/LLM delivery, modern cloud data platforms, and enterprise agile transformation.",
     "inLanguage": ["en", "pl"],
     "dateCreated": "2024-01-01T00:00:00+01:00",
-    "dateModified": "2026-09-19T10:00:00+02:00",
+    "dateModified": "2026-10-24T23:55:00+02:00",
     "mainEntity": {
       "@type": "Person",
       "@id": "https://www.marcinrzezniczuk.pl/#person",
@@ -165,7 +168,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Warsaw",
+        "addressLocality": "Ostrów Wielkopolski",
+        "addressRegion": "Wielkopolskie",
         "addressCountry": "PL"
       }
     }
@@ -288,13 +292,50 @@
         </div>
 
         <!-- Przycisk CTA -->
-        <a href="#contact" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
           Book Discovery Call
           <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
         </a>
+
+        <!-- Przycisk Menu Mobilnego (< xl) -->
+        <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" class="xl:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-blue-600 hover:bg-slate-100 border border-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <svg id="mobile-icon-open" aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="mobile-icon-close" aria-hidden="true" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </nav>
+    </div>
+
+    <!-- Rozwijane Menu Mobilne (< xl) -->
+    <div id="mobile-menu" class="hidden xl:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="max-w-7xl mx-auto flex flex-col gap-1.5 text-sm font-semibold text-slate-700">
+        <a href="#about" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          About
+        </a>
+        <a href="#experience" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Experience
+        </a>
+        <a href="#certifications" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Certifications
+        </a>
+        <a href="#expertise" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Expertise
+        </a>
+        <a href="#how-i-work" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          How I Work
+        </a>
+        <a href="#contact" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Contact
+        </a>
+        <a href="#contact" onclick="closeMobileMenu()" class="sm:hidden mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md font-tech uppercase tracking-wider">
+          Book Discovery Call
+        </a>
+      </div>
     </div>
   </header>
 
@@ -1316,7 +1357,7 @@
     </div>
   </footer>
 
-    <!-- Skrypt obsługujący kopiowanie do schowka -->
+    <!-- Skrypt obsługujący kopiowanie do schowka i menu mobilne -->
   <script>
     function copyEmailToClipboard() {
       const email = 'marcin.rzezniczuk@gmail.com';
@@ -1354,6 +1395,35 @@
         console.error('Fallback copy failed', err);
       }
       document.body.removeChild(textArea);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (iconOpen) iconOpen.classList.remove('hidden');
+      if (iconClose) iconClose.classList.add('hidden');
     }
   </script>
 

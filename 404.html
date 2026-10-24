@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Page Not Found | Marcin Rzeźniczuk</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#1d4ed8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            brand: ['Orbitron', 'sans-serif'],
+            tech: ['Rajdhani', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    .polygon-shard-1 { clip-path: polygon(0 0, 100% 0, 0 100%); }
+    .polygon-shard-2 { clip-path: polygon(0 0, 100% 100%, 0 100%); }
+  </style>
+</head>
+<body class="bg-[#fcfdfe] text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+  <!-- Background geometry -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden select-none">
+    <div class="absolute -top-12 -left-12 w-72 sm:w-96 h-72 sm:h-96 bg-blue-700/80 polygon-shard-1 opacity-90"></div>
+    <div class="absolute top-0 left-0 w-80 sm:w-[28rem] h-80 sm:h-[28rem] bg-blue-600/40 polygon-shard-2 opacity-70"></div>
+    <div class="absolute -bottom-16 -right-16 w-80 sm:w-[32rem] h-80 sm:h-[32rem] bg-blue-700/85 rotate-180 polygon-shard-1 opacity-90"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-35"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/" class="flex flex-col group focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-1 -m-1" aria-label="Marcin Rzeźniczuk - Homepage">
+        <span class="font-brand font-black text-xl sm:text-2xl tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">
+          MARCIN RZEŹNICZUK
+        </span>
+        <span class="font-tech font-bold text-xs sm:text-sm tracking-[0.2em] text-blue-600 -mt-0.5 uppercase">
+          Technical Project Manager &bull; AI Product Lead
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main 404 Card -->
+  <main id="main-content" class="flex-grow flex items-center justify-center px-4 py-16">
+    <div class="max-w-2xl w-full bg-white/95 rounded-3xl border border-slate-200/90 shadow-2xl p-8 sm:p-12 text-center relative overflow-hidden">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 font-brand font-black text-2xl mb-6">
+        404
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
+        Page Not Found / Nie znaleziono strony
+      </h1>
+
+      <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+        The address you requested does not exist or has been moved.
+      </p>
+      <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-8">
+        Podany adres nie istnieje lub został przeniesiony.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all font-tech uppercase tracking-wider">
+          Homepage (EN)
+        </a>
+        <a href="/pl/" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl transition-all font-tech uppercase tracking-wider">
+          Strona główna (PL)
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs sm:text-sm text-slate-500">
+    <span class="font-bold text-slate-900">Marcin Rzeźniczuk</span> &bull; &copy; 2026
+  </footer>
+
+</body>
+</html>

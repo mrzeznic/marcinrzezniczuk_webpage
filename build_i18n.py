@@ -105,7 +105,7 @@ def generate_en(template: str) -> str:
     c = clean_css(c)
 
     # 10. Dedicated clean script for English page
-    en_script = """  <!-- Skrypt obsługujący kopiowanie do schowka -->
+    en_script = """  <!-- Skrypt obsługujący kopiowanie do schowka i menu mobilne -->
   <script>
     function copyEmailToClipboard() {
       const email = 'marcin.rzezniczuk@gmail.com';
@@ -143,6 +143,35 @@ def generate_en(template: str) -> str:
         console.error('Fallback copy failed', err);
       }
       document.body.removeChild(textArea);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (iconOpen) iconOpen.classList.remove('hidden');
+      if (iconClose) iconClose.classList.add('hidden');
     }
   </script>"""
 
@@ -199,12 +228,26 @@ def generate_pl(template: str) -> str:
     # 6. JSON-LD URL & language
     c = c.replace('"url": "https://www.marcinrzezniczuk.pl/"', '"url": "https://www.marcinrzezniczuk.pl/pl/"')
     c = c.replace('"inLanguage": ["en", "pl"]', '"inLanguage": "pl"')
+    pl_page_desc = "Oficjalne portfolio Marcina Rzeźniczuka. Technical Project Manager & AI Product Lead specjalizujący się we wdrażaniu rozwiązań AI/LLM, nowoczesnych platform danych w chmurze oraz transformacjach zwinnych enterprise."
+    c = re.sub(
+        r'"description": "Official portfolio of Marcin Rzeźniczuk\. Technical Project Manager & AI Product Lead specializing in AI/LLM delivery, modern cloud data platforms, and enterprise agile transformation\."',
+        f'"description": "{pl_page_desc}"',
+        c
+    )
     pl_jsonld_desc = "Technical Project Manager & AI Product Lead z ponad 10-letnim doświadczeniem w dostarczaniu systemów AI/LLM, nowoczesnych architektur danych oraz zwinnych strumieni wartości."
     c = re.sub(
         r'"description": "Technical Project Manager & AI Product Lead with over a decade of experience delivering enterprise AI/LLM products, modern cloud data architectures, and agile value streams\."',
         f'"description": "{pl_jsonld_desc}"',
         c
     )
+
+    # 6b. Polish ARIA labels & mailto subject
+    c = c.replace('aria-label="Marcin Rzeźniczuk - Homepage"', 'aria-label="Marcin Rzeźniczuk - Strona główna"')
+    c = c.replace('aria-label="Main navigation"', 'aria-label="Nawigacja główna"')
+    c = c.replace('aria-label="Toggle navigation menu"', 'aria-label="Przełącz menu nawigacji"')
+    c = c.replace('aria-label="LinkedIn profile (opens in a new tab)"', 'aria-label="Profil LinkedIn (otwiera się w nowej karcie)"')
+    c = c.replace('aria-label="Copy email address to clipboard"', 'aria-label="Kopiuj adres e-mail do schowka"')
+    c = c.replace('?subject=Inquiry:%20Technical%20Project%20Manager%20/%20AI%20Product%20Lead', '?subject=Zapytanie:%20Technical%20Project%20Manager%20/%20AI%20Product%20Lead')
 
     # 7. Copy button element
     c = c.replace(
@@ -222,7 +265,7 @@ def generate_pl(template: str) -> str:
     c = clean_css(c)
 
     # 11. Dedicated clean script for Polish page
-    pl_script = """  <!-- Skrypt obsługujący kopiowanie do schowka -->
+    pl_script = """  <!-- Skrypt obsługujący kopiowanie do schowka i menu mobilne -->
   <script>
     function copyEmailToClipboard() {
       const email = 'marcin.rzezniczuk@gmail.com';
@@ -260,6 +303,35 @@ def generate_pl(template: str) -> str:
         console.error('Fallback copy failed', err);
       }
       document.body.removeChild(textArea);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (iconOpen) iconOpen.classList.remove('hidden');
+      if (iconClose) iconClose.classList.add('hidden');
     }
   </script>"""
 

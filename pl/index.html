@@ -15,6 +15,9 @@
   <!-- Theme Color & Mobile Chrome -->
   <meta name="theme-color" content="#1d4ed8" />
   <meta name="color-scheme" content="light" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
@@ -48,10 +51,10 @@
     "url": "https://www.marcinrzezniczuk.pl/pl/",
     "name": "Marcin Rzeźniczuk – Technical Project Manager & AI Product Lead",
     "headline": "Marcin Rzeźniczuk – Technical Project Manager & AI Product Lead",
-    "description": "Official portfolio of Marcin Rzeźniczuk. Technical Project Manager & AI Product Lead specializing in AI/LLM delivery, modern cloud data platforms, and enterprise agile transformation.",
+    "description": "Oficjalne portfolio Marcina Rzeźniczuka. Technical Project Manager & AI Product Lead specjalizujący się we wdrażaniu rozwiązań AI/LLM, nowoczesnych platform danych w chmurze oraz transformacjach zwinnych enterprise.",
     "inLanguage": "pl",
     "dateCreated": "2024-01-01T00:00:00+01:00",
-    "dateModified": "2026-09-19T10:00:00+02:00",
+    "dateModified": "2026-10-24T23:55:00+02:00",
     "mainEntity": {
       "@type": "Person",
       "@id": "https://www.marcinrzezniczuk.pl/#person",
@@ -165,7 +168,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Warsaw",
+        "addressLocality": "Ostrów Wielkopolski",
+        "addressRegion": "Wielkopolskie",
         "addressCountry": "PL"
       }
     }
@@ -245,7 +249,7 @@
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Sygnatura Eksperta -->
-      <a href="#" class="flex flex-col group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1 -m-1" aria-label="Marcin Rzeźniczuk - Homepage">
+      <a href="#" class="flex flex-col group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg p-1 -m-1" aria-label="Marcin Rzeźniczuk - Strona główna">
         <span class="font-brand font-black text-xl sm:text-2xl tracking-wider text-slate-900 group-hover:text-blue-600 transition-colors">
           MARCIN RZEŹNICZUK
         </span>
@@ -255,7 +259,7 @@
       </a>
 
       <!-- Menu nawigacyjne + Przełącznik Języka -->
-      <nav class="flex items-center gap-4 sm:gap-6" aria-label="Main navigation">
+      <nav class="flex items-center gap-4 sm:gap-6" aria-label="Nawigacja główna">
         <div class="hidden xl:flex items-center gap-6 text-sm font-semibold text-slate-700">
           <a href="#about" class="hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1.5 py-0.5">
             O mnie
@@ -288,13 +292,50 @@
         </div>
 
         <!-- Przycisk CTA -->
-        <a href="#contact" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 font-tech uppercase tracking-wider">
           Umów rozmowę
           <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
         </a>
+
+        <!-- Przycisk Menu Mobilnego (< xl) -->
+        <button id="mobile-menu-btn" type="button" onclick="toggleMobileMenu()" class="xl:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-slate-700 hover:text-blue-600 hover:bg-slate-100 border border-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false" aria-label="Przełącz menu nawigacji">
+          <svg id="mobile-icon-open" aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="mobile-icon-close" aria-hidden="true" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </nav>
+    </div>
+
+    <!-- Rozwijane Menu Mobilne (< xl) -->
+    <div id="mobile-menu" class="hidden xl:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-md px-4 pt-3 pb-5 shadow-lg">
+      <div class="max-w-7xl mx-auto flex flex-col gap-1.5 text-sm font-semibold text-slate-700">
+        <a href="#about" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          O mnie
+        </a>
+        <a href="#experience" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Doświadczenie
+        </a>
+        <a href="#certifications" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Certyfikaty
+        </a>
+        <a href="#expertise" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Obszary Ekspertyzy
+        </a>
+        <a href="#how-i-work" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Jak pracuję
+        </a>
+        <a href="#contact" onclick="closeMobileMenu()" class="px-3 py-2.5 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors">
+          Kontakt
+        </a>
+        <a href="#contact" onclick="closeMobileMenu()" class="sm:hidden mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-md font-tech uppercase tracking-wider">
+          Umów rozmowę
+        </a>
+      </div>
     </div>
   </header>
 
@@ -404,7 +445,7 @@
                   </span>
                   <span class="text-sm font-bold text-slate-900">LinkedIn Network</span>
                 </div>
-                <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-blue-200 text-xs font-bold text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-2xs focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="LinkedIn profile (opens in a new tab)">
+                <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-blue-200 text-xs font-bold text-blue-600 hover:bg-blue-600 hover:text-white transition-all shadow-2xs focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Profil LinkedIn (otwiera się w nowej karcie)">
                   Zobacz profil
                   <svg aria-hidden="true" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -1259,7 +1300,7 @@
                   <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">
                     Sieć zawodowa
                   </div>
-                  <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-blue-400 hover:text-blue-300 transition-colors mt-0.5 block focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="LinkedIn profile (opens in a new tab)">
+                  <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-blue-400 hover:text-blue-300 transition-colors mt-0.5 block focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Profil LinkedIn (otwiera się w nowej karcie)">
                     linkedin.com/in/marcinrzezniczuk
                   </a>
                 </div>
@@ -1269,7 +1310,7 @@
             <!-- Przyciski akcji: Smart Mailto, Copy Email & LinkedIn -->
             <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center">
               <!-- Smart Mailto -->
-              <a href="mailto:marcin.rzezniczuk@gmail.com?subject=Inquiry:%20Technical%20Project%20Manager%20/%20AI%20Product%20Lead" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-slate-900 bg-white hover:bg-blue-50 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white font-tech uppercase tracking-wider">
+              <a href="mailto:marcin.rzezniczuk@gmail.com?subject=Zapytanie:%20Technical%20Project%20Manager%20/%20AI%20Product%20Lead" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-slate-900 bg-white hover:bg-blue-50 rounded-xl shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-white font-tech uppercase tracking-wider">
                 <svg aria-hidden="true" class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
@@ -1277,7 +1318,7 @@
               </a>
 
               <!-- Copy-to-Clipboard Button -->
-              <button id="copy-email-btn" onclick="copyEmailToClipboard()" class="inline-flex items-center justify-center gap-2 px-5 py-4 text-base font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 font-tech uppercase tracking-wider cursor-pointer" aria-label="Copy email address to clipboard">
+              <button id="copy-email-btn" onclick="copyEmailToClipboard()" class="inline-flex items-center justify-center gap-2 px-5 py-4 text-base font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 font-tech uppercase tracking-wider cursor-pointer" aria-label="Kopiuj adres e-mail do schowka">
                 <svg aria-hidden="true" class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
                 </svg>
@@ -1285,7 +1326,7 @@
               </button>
 
               <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 font-tech uppercase tracking-wider" aria-label="LinkedIn profile (opens in a new tab)">
+              <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-base font-bold text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 font-tech uppercase tracking-wider" aria-label="Profil LinkedIn (otwiera się w nowej karcie)">
                 Wiadomość na LinkedIn
               </a>
             </div>
@@ -1309,14 +1350,14 @@
       <div class="flex items-center gap-6">
         <span class="font-tech font-bold tracking-widest text-slate-600 uppercase">Technical Project Manager &bull; AI Product Lead</span>
         <span>&bull;</span>
-        <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1" aria-label="LinkedIn profile (opens in a new tab)">
+        <a href="https://www.linkedin.com/in/marcinrzezniczuk/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1" aria-label="Profil LinkedIn (otwiera się w nowej karcie)">
           LinkedIn
         </a>
       </div>
     </div>
   </footer>
 
-    <!-- Skrypt obsługujący kopiowanie do schowka -->
+    <!-- Skrypt obsługujący kopiowanie do schowka i menu mobilne -->
   <script>
     function copyEmailToClipboard() {
       const email = 'marcin.rzezniczuk@gmail.com';
@@ -1354,6 +1395,35 @@
         console.error('Fallback copy failed', err);
       }
       document.body.removeChild(textArea);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        if (iconOpen) iconOpen.classList.add('hidden');
+        if (iconClose) iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const btn = document.getElementById('mobile-menu-btn');
+      const iconOpen = document.getElementById('mobile-icon-open');
+      const iconClose = document.getElementById('mobile-icon-close');
+      if (!menu || !btn) return;
+      menu.classList.add('hidden');
+      btn.setAttribute('aria-expanded', 'false');
+      if (iconOpen) iconOpen.classList.remove('hidden');
+      if (iconClose) iconClose.classList.add('hidden');
     }
   </script>
 
